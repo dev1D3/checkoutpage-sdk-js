@@ -11,13 +11,13 @@ It is package that will help you with generating payment URL according to
 
 1. Install the package (with your package manager):
 ```shell
-npm install 1d3
-yarn add 1d3
+npm install 1d3-sdk
+yarn add 1d3-sdk
 ```
 
 2. Require somewhere in your code, set parameters and get the URL:
 ```javascript
-const { Payment } = require('1d3');
+const { Payment } = require('1d3-sdk');
 
 // create Payment object with your account ID and secret salt
 const e = new Payment('112', 'my_secret');
@@ -39,7 +39,7 @@ Now your can render payment `url` somewhere on your checkout page.
 
 Example with [Express](http://expressjs.com):
 ```javascript
-const { Callback } = require('1d3');
+const { Callback } = require('1d3-sdk');
 
 app.post('/payment/callback', function(req, res) {
   const callback = new Callback('secret', req.body);
